@@ -63,17 +63,18 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     category: "Cybersécurité",
-    items: ["Analyse de vulnérabilités web, systèmes et réseaux", "Sécurité défensive: configuration pare-feu, gestion contrôle d’accès AD", "SIEM", "Forensics", "Pentest"],
+    items: ["Analyse de vulnérabilités web, systèmes et réseaux", "Sécurité défensive: configuration pare-feu, gestion contrôle d’accès AD", "Sécurité offensive : OSINT, tests d’intrusion", "Investigation numérique & réponse à incident"],
     icon: "shield",
   },
   {
     category: "Systèmes & Réseaux",
-    items: ["Linux", "Windows Server", "Firewall", "VPN", "Segmentation réseau", "DHCP", "DNS", "AD"],
+    items: ["Linux/Ubuntu", "Windows Server", "VPN", "Segmentation réseau", "DHCP", "DNS", "AD", "Supervision, PRA / PCA, documentation technique"
+    ],
     icon: "network",
   },
   {
     category: "Cloud",
-    items: ["Azure", "IAM", "Infrastructure as Code"],
+    items: ["Azure", "IAM"],
     icon: "cloud",
   },
   {
@@ -83,7 +84,7 @@ export const skills: Skill[] = [
   },
   {
     category: "Virtualisation",
-    items: ["Proxmox", "Docker", "VMware", "Hyper-V"],
+    items: ["Proxmox", "Docker", "VMware"],
     icon: "server",
   },
   {
