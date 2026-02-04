@@ -9,7 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Trevys Sarrazyn | Portfolio Cybersécurité',
-  description: 'Portfolio de Trevys Sarrazyn, étudiant en cybersécurité spécialisé en infrastructures sécurisées, réseaux, cloud et supervision. À la recherche d\'une alternance ou d\'un stage.',
+  description: 'Portfolio de Trevys Sarrazyn, étudiant en cybersécurité chez la Plateform_. À la recherche d\'une alternance.',
   generator: 'v0.app',
   icons: {
     icon: [
