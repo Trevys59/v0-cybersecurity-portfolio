@@ -148,13 +148,13 @@ export const education: Education[] = [
   {
     degree: "Administrateur d'Infrastructures Sécurisées",
     school: "Simplon",
-    period: "2024 – 2025",
+    period: "12/2024 – 10/2025",
     description: "Titre professionnel de niveau 6",
   },
   {
     degree: "BTS Systèmes Numériques – option Informatique & Réseaux",
     school: "Lycée César Baggio",
-    period: "2022 – 2024",
+    period: "09/2022 – 07/2024",
   },
 ];
 
