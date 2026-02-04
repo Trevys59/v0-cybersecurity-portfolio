@@ -31,7 +31,7 @@ export function Hero() {
 
         {/* Title */}
         <h2 className="text-lg md:text-xl text-muted-foreground mb-6 font-mono animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-          Étudiant en Cybersécurité – Administrateur d{"'"}Infrastructures Sécurisées
+          Étudiant en Cybersécurité
         </h2>
 
         {/* Slogan */}
