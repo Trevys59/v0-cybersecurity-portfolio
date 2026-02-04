@@ -45,6 +45,7 @@ export function Hero() {
             size="lg" 
             className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8"
           >
+            <a href="/CV_Trevys_Sarrazyn.pdf" download>
             <Download className="w-4 h-4 mr-2 transition-transform group-hover:-translate-y-0.5" />
             Télécharger CV
           </Button>
