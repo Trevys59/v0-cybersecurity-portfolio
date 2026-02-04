@@ -68,8 +68,7 @@ export const skills: Skill[] = [
   },
   {
     category: "Systèmes & Réseaux",
-    items: ["Linux/Ubuntu", "Windows Server", "VPN", "Segmentation réseau", "DHCP", "DNS", "AD", "Supervision, PRA / PCA, documentation technique"
-    ],
+    items: ["Linux/Ubuntu", "Windows Server", "VPN", "Segmentation réseau", "DHCP", "DNS", "AD", "Supervision, PRA / PCA, documentation technique"],
     icon: "network",
   },
   {
