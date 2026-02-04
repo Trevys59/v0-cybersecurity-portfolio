@@ -135,6 +135,7 @@ export interface Education {
   degree: string;
   school: string;
   period: string;
+  description: string;
 }
 
 export const education: Education[] = [
@@ -142,11 +143,13 @@ export const education: Education[] = [
     degree: "Mastère Cybersécurité",
     school: "La Plateforme_",
     period: "2026 – 2027",
+    description: "Expert en sécurité informatique & cybersécurité. Titre professionnel de niveau 7",
   },
   {
     degree: "Administrateur d'Infrastructures Sécurisées",
     school: "Simplon",
     period: "2024 – 2025",
+    description: "Titre professionnel de niveau 6",
   },
   {
     degree: "BTS Systèmes Numériques – option Informatique & Réseaux",
