@@ -19,23 +19,18 @@ export function About() {
           {/* Main text */}
           <div className="md:col-span-2 space-y-6">
             <p className="text-lg text-foreground/90 leading-relaxed">
-              Étudiant en cybersécurité en formation Bac+5, je me spécialise dans
+              Étudiant en cybersécurité en Bac+5, je me forme dans
               la conception et l{"'"}administration d{"'"}
               <span className="text-primary font-medium">
                 infrastructures sécurisées
               </span>
-              , les réseaux, le cloud et la supervision.
+              , entre réseaux, cloud et supervision.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Passionné par la protection des systèmes d{"'"}information, je
-              m{"'"}intéresse particulièrement à la surveillance proactive et à
-              la construction d{"'"}architectures résilientes capables de
-              résister aux menaces modernes.
+              Je m{"'"}intéresse beaucoup à la surveillance des systèmes et à la manière de construire des architectures solides face aux menaces actuelles. J{"'"}aime l{"'"}idée d{"'"}anticiper les problèmes plutôt que de les subir.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Mon objectif : contribuer à la sécurisation des infrastructures
-              critiques et accompagner les organisations dans leur transformation
-              numérique sécurisée.
+              Mon objectif : travailler dans la sécurité des infrastructures et aider les organisations à évoluer vers un numérique plus sûr.
             </p>
           </div>
 
