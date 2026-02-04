@@ -94,7 +94,7 @@ export const skills: Skill[] = [
   },
   {
     category: "Gestion de Projet",
-    items: ["Méthodes agiles", "Scrum", "Kanban", "Documentation technique"],
+    items: ["Méthodes agiles", "outils de plannification", "Documentation technique"],
     icon: "project",
   },
 ];
