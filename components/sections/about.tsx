@@ -52,11 +52,6 @@ export function About() {
               <div className="text-foreground font-medium">Infrastructure</div>
             </div>
             <div className="p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors group">
-              <Cloud className="w-5 h-5 text-primary mb-2 group-hover:scale-110 transition-transform" />
-              <div className="text-sm text-muted-foreground">Cloud</div>
-              <div className="text-foreground font-medium">Azure</div>
-            </div>
-            <div className="p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors group">
               <Shield className="w-5 h-5 text-primary mb-2 group-hover:scale-110 transition-transform" />
               <div className="text-sm text-muted-foreground">Niveau</div>
               <div className="text-foreground font-medium">Bac+5 en cours</div>
