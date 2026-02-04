@@ -63,7 +63,7 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     category: "Cybersécurité",
-    items: ["Analyse de vulnérabilités", "Hardening", "SIEM", "Forensics", "Pentest"],
+    items: ["Analyse de vulnérabilités web, systèmes et réseaux", "Sécurité défensive: configuration pare-feu, gestion contrôle d’accès AD", "SIEM", "Forensics", "Pentest"],
     icon: "shield",
   },
   {
