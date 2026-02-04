@@ -27,10 +27,7 @@ export function About() {
               , les réseaux, le cloud et la supervision.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Passionné par la protection des systèmes d{"'"}information, je
-              m{"'"}intéresse particulièrement à la surveillance proactive et à
-              la construction d{"'"}architectures résilientes capables de
-              résister aux menaces modernes.
+              Je m{"'"}intéresse beaucoup à la surveillance des systèmes et à la manière de construire des architectures solides face aux menaces actuelles. J{"'"}aime l{"'"}idée d{"'"}anticiper les problèmes plutôt que de les subir.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Mon objectif : travailler dans la sécurité des infrastructures et aider les organisations à évoluer vers un numérique plus sûr.
