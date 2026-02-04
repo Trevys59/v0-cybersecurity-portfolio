@@ -48,6 +48,7 @@ export function Hero() {
             <a href="/CV_Trevys_Sarrazyn.pdf" download>
             <Download className="w-4 h-4 mr-2 transition-transform group-hover:-translate-y-0.5" />
             Télécharger CV
+            </a>
           </Button>
           <Button 
             variant="outline" 
