@@ -33,9 +33,7 @@ export function About() {
               résister aux menaces modernes.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Mon objectif : contribuer à la sécurisation des infrastructures
-              critiques et accompagner les organisations dans leur transformation
-              numérique sécurisée.
+              Mon objectif : travailler dans la sécurité des infrastructures et aider les organisations à évoluer vers un numérique plus sûr.
             </p>
           </div>
 
