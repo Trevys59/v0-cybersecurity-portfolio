@@ -41,6 +41,7 @@ export function Education() {
                     </span>
                   </div>
                   <p className="text-muted-foreground">{edu.school}</p>
+                  <p className="text-muted-foreground">{edu.school}</p>
                 </div>
               </div>
             </div>
