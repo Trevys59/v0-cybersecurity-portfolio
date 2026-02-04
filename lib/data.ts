@@ -89,7 +89,7 @@ export const skills: Skill[] = [
   },
   {
     category: "Développement & Automatisation",
-    items: ["Python", "Bash", "C/C++", "Java", "PHP", "JavaScript"],
+    items: ["Python", "Shell/Bash", "C/C++", "Java", "PHP", "JavaScript"],
     icon: "code",
   },
   {
