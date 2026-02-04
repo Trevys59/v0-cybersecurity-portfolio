@@ -63,17 +63,17 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     category: "Cybersécurité",
-    items: ["Analyse de vulnérabilités", "Hardening", "SIEM", "Forensics", "Pentest"],
+    items: ["Analyse de vulnérabilités web, systèmes et réseaux", "Sécurité défensive: configuration pare-feu, gestion contrôle d’accès AD", "Sécurité offensive : OSINT, tests d’intrusion", "Investigation numérique & réponse à incident"],
     icon: "shield",
   },
   {
     category: "Systèmes & Réseaux",
-    items: ["Linux", "Windows Server", "Firewall", "VPN", "Segmentation réseau", "DHCP", "DNS", "AD"],
+    items: ["Linux/Ubuntu", "Windows Server", "VPN", "Segmentation réseau", "DHCP", "DNS", "AD", "Supervision, PRA / PCA, documentation technique"],
     icon: "network",
   },
   {
     category: "Cloud",
-    items: ["Azure", "IAM", "Infrastructure as Code"],
+    items: ["Azure", "IAM"],
     icon: "cloud",
   },
   {
@@ -83,17 +83,17 @@ export const skills: Skill[] = [
   },
   {
     category: "Virtualisation",
-    items: ["Proxmox", "Docker", "VMware", "Hyper-V"],
+    items: ["Proxmox", "Docker", "VMware"],
     icon: "server",
   },
   {
     category: "Développement & Automatisation",
-    items: ["Python", "Bash", "C/C++", "Java", "PHP", "JavaScript"],
+    items: ["Python", "Shell/Bash", "C/C++", "Java", "PHP", "JavaScript"],
     icon: "code",
   },
   {
     category: "Gestion de Projet",
-    items: ["Méthodes agiles", "Scrum", "Kanban", "Documentation technique"],
+    items: ["Méthodes agiles", "outils de plannification", "Documentation technique"],
     icon: "project",
   },
 ];
@@ -134,23 +134,26 @@ export interface Education {
   degree: string;
   school: string;
   period: string;
+  description: string;
 }
 
 export const education: Education[] = [
   {
     degree: "Mastère Cybersécurité",
     school: "La Plateforme_",
-    period: "2026 – 2027",
+    period: "01/2026 – 07/2027",
+    description: "Expert en sécurité informatique & cybersécurité. Titre professionnel de niveau 7",
   },
   {
     degree: "Administrateur d'Infrastructures Sécurisées",
     school: "Simplon",
-    period: "2024 – 2025",
+    period: "12/2024 – 10/2025",
+    description: "Titre professionnel de niveau 6",
   },
   {
     degree: "BTS Systèmes Numériques – option Informatique & Réseaux",
     school: "Lycée César Baggio",
-    period: "2022 – 2024",
+    period: "09/2022 – 07/2024",
   },
 ];
 
