@@ -59,12 +59,6 @@ export function Contact() {
               <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 <Globe className="w-5 h-5" />
               </div>
-              <div className="flex-1">
-                <div className="text-sm text-muted-foreground">Portfolio</div>
-                <div className="text-foreground group-hover:text-primary transition-colors">
-                  Voir mon portfolio
-                </div>
-              </div>
               <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
           </div>
