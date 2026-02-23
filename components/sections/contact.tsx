@@ -50,17 +50,6 @@ export function Contact() {
               </div>
             </div>
 
-            <a
-              href={contactInfo.portfolio}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300"
-            >
-              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                <Globe className="w-5 h-5" />
-              </div>
-              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-            </a>
           </div>
 
           {/* Social links */}
