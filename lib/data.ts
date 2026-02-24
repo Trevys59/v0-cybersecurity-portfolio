@@ -8,49 +8,118 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "infra-multisite",
-    title: "Infrastructure Sécurisée Multi-Sites",
+    id: "seahawks-monitoring",
+    title: "Seahawks Monitoring – Infrastructure Multi-Sites Supervisée et Sécurisée",
     description:
-      "Conception et déploiement d'une infrastructure virtualisée interconnectant plusieurs sites distants avec une haute disponibilité et une sécurité renforcée.",
-    technologies: ["Proxmox", "pfSense", "VPN IPsec", "VLAN", "HAProxy"],
+      "Conception et déploiement d’une infrastructure multi-sites haute disponibilité reposant sur Proxmox, pfSense et une segmentation VLAN avancée. Mise en place d’un VPN Site-to-Site IPsec entre Roubaix et Kansas, d’un VPN Client-to-Site WireGuard pour les franchises NFL, d’un cluster web Nester derrière HAProxy en DMZ, d’une base MariaDB multi-tenant (Nester Manager), d’un pipeline CI/CD GitLab et d’une stack complète de supervision (Prometheus, Grafana, Loki, Alertmanager). Le projet intègre également un système de ticketing et d’inventaire GLPI, une stratégie de sauvegarde Veeam avec “backup du backup”, ainsi qu’une télémaintenance sécurisée via VM rebond.",
+    technologies: [
+      "Proxmox VE",
+      "ZFS RAIDZ-3",
+      "pfSense",
+      "IPsec",
+      "WireGuard",
+      "VLAN",
+      "HAProxy",
+      "NGINX",
+      "MariaDB",
+      "Python (Flask)",
+      "GitLab CI/CD",
+      "Prometheus",
+      "Grafana",
+      "Loki",
+      "GLPI",
+      "Veeam Backup",
+      "Debian",
+      "Ubuntu Server",
+      "Rocky Linux",
+      "AlmaLinux",
+      "Arch Linux"
+    ],
     securityObjective:
-      "Assurer la confidentialité des échanges inter-sites et la résilience face aux pannes.",
+      "Garantir la supervision centralisée d’infrastructures distantes tout en assurant l’isolation réseau, le chiffrement des communications inter-sites, la haute disponibilité des services critiques et la résilience des données via une stratégie de sauvegarde redondante."
   },
   {
-    id: "supervision-centralisee",
-    title: "Supervision Centralisée",
+    id: "tp-intrusion-ad",
+    title: "Simulation d’Intrusion et Mouvement Latéral",
     description:
-      "Mise en place d'une stack de supervision complète permettant le monitoring en temps réel des infrastructures, avec alerting et dashboards personnalisés.",
-    technologies: ["Prometheus", "Grafana", "Loki", "Alertmanager", "Node Exporter"],
+      "Réalisation d’un scénario d’attaque complet en environnement contrôlé : création d’un reverse shell, compromission d’un wiki via bruteforce, déploiement d’un cheval de Troie, pivot réseau et scan interne avec nmap. Objectif : comprendre les mécanismes d’intrusion afin de mieux sécuriser les infrastructures.",
+    technologies: [
+      "Linux",
+      "Bash",
+      "Netcat",
+      "Nmap",
+      "Python",
+      "Dokuwiki",
+      "LaZagne"
+    ],
     securityObjective:
-      "Détecter les anomalies et intrusions potentielles grâce à une surveillance proactive.",
+      "Identifier les vecteurs d’attaque (reverse shell, bruteforce, élévation de privilèges) pour renforcer la détection et la résilience face aux compromissions internes."
   },
   {
-    id: "cloud-azure",
-    title: "Architecture Cloud Sécurisée sur Azure",
+    id: "infra-linux-azure",
+    title: "Infrastructure Linux Sécurisée sur Azure",
     description:
-      "Déploiement d'une architecture cloud respectant les bonnes pratiques de sécurité avec gestion des identités, chiffrement et segmentation réseau.",
-    technologies: ["Azure", "Azure AD", "Key Vault", "NSG", "Azure Firewall"],
+      "Déploiement et administration de machines virtuelles Linux sur Microsoft Azure avec accès sécurisé via Bastion. Configuration réseau, validation des accès distants et mise en ligne d’une application web (Fly Airlines) accessible de manière contrôlée.",
+    technologies: [
+      "Microsoft Azure",
+      "Azure Bastion",
+      "Ubuntu Server",
+      "VM",
+      "Réseau Cloud"
+    ],
     securityObjective:
-      "Appliquer le principe du moindre privilège et protéger les données sensibles dans le cloud.",
+      "Sécuriser l’accès aux machines virtuelles sans exposition publique via Bastion et garantir l’isolation réseau des ressources cloud."
   },
   {
-    id: "audit-reseau",
-    title: "Audit de Sécurité Réseau",
+    id: "infrastructure-securisee-vlan-vpn-web",
+    title: "Déploiement d’une Infrastructure Sécurisée Segmentée (VLAN + VPN + Apache)",
     description:
-      "Réalisation d'un audit complet d'un réseau d'entreprise incluant analyse des vulnérabilités, tests de pénétration et recommandations de remédiation.",
-    technologies: ["Nmap", "Wireshark", "Nessus", "Metasploit", "Burp Suite"],
+      "Conception et mise en œuvre d’une infrastructure réseau segmentée sous pfSense avec création de VLANs dédiés (Windows, Linux, Clients), configuration de règles de pare-feu inter-VLAN, déploiement d’un serveur Web Apache sur Debian 11 avec hôtes virtuels, et mise en place d’un VPN OpenVPN sécurisé avec certificats (CA interne, AES-256, SHA256). L’objectif était d’assurer l’isolation des environnements, le contrôle des flux et l’accès distant sécurisé aux ressources internes.",
+    technologies: [
+      "pfSense",
+      "VLAN",
+      "Firewall",
+      "OpenVPN",
+      "Apache2",
+      "Debian 11",
+      "UFW",
+      "NAT",
+      "AES-256",
+      "SHA256"
+    ],
     securityObjective:
-      "Identifier et prioriser les failles de sécurité pour renforcer la posture défensive.",
+      "Isoler les environnements via segmentation réseau, contrôler strictement les flux inter-VLAN et garantir un accès distant chiffré aux ressources internes grâce à OpenVPN."
   },
   {
-    id: "automation-python",
-    title: "Outil Python d'Automatisation Sécurité",
+    id: "audit-securisation-ad",
+    title: "Audit et Sécurisation d’une Infrastructure Active Directory",
     description:
-      "Développement d'un outil en Python automatisant les tâches répétitives de sécurité : scan de ports, vérification de configurations, génération de rapports.",
-    technologies: ["Python", "Scapy", "Paramiko", "Jinja2", "SQLite"],
+      "Audit complet d’un domaine Active Directory avec Ping Castle et Purple Knight, identification des vulnérabilités (objets obsolètes, comptes privilégiés, protocoles faibles), déploiement d’un serveur Core sécurisé et création d’un domaine renforcé via Hello-My-Dir. Comparaison avant/après pour mesurer l’amélioration de la posture de sécurité.",
+    technologies: [
+      "Active Directory",
+      "Windows Server Core",
+      "Ping Castle",
+      "Purple Knight",
+      "Hello-My-Dir"
+    ],
     securityObjective:
-      "Réduire le temps de réponse aux incidents et standardiser les procédures de contrôle.",
+      "Réduire la surface d’attaque du domaine AD en corrigeant les vulnérabilités critiques et en appliquant des standards de sécurité avancés."
+  },
+  {
+    id: "rds-remoteapp-deployment",
+    title: "Déploiement et Publication Sécurisée d’Applications via RDS",
+    description:
+      "Conception et déploiement d’une infrastructure Remote Desktop Services (RDS) sous Windows Server permettant la publication d’applications via RemoteApp et interface Web sécurisée (HTTPS). Mise en place d’une collection de sessions, gestion des droits d’accès utilisateurs, intégration Active Directory et distribution centralisée des applications sans installation locale sur les postes clients.",
+    technologies: [
+      "Windows Server",
+      "RDS",
+      "RemoteApp",
+      "RDP",
+      "HTTPS",
+      "Active Directory"
+    ],
+    securityObjective:
+      "Centraliser l’exécution des applications sur un serveur sécurisé afin de limiter l’exposition des postes clients, maîtriser les droits d’accès et garantir un accès distant chiffré aux ressources."
   },
 ];
 
@@ -154,6 +223,7 @@ export const education: Education[] = [
     degree: "BTS Systèmes Numériques – option Informatique & Réseaux",
     school: "Lycée César Baggio",
     period: "09/2022 – 07/2024",
+    description: ""
   },
 ];
 
