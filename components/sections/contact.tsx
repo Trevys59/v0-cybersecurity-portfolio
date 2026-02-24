@@ -40,7 +40,13 @@ export function Contact() {
               </div>
             </a>
 
-
+            <div className="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
+              <p className="text-sm text-muted-foreground text-center">
+                Actuellement à la recherche d{"'"}une{" "}
+                <span className="text-primary font-medium">alternance</span> {" "}
+                en cybersécurité.
+              </p>
+            </div>
 
           </div>
 
@@ -94,13 +100,7 @@ export function Contact() {
               </Button>
             </a>
 
-            <div className="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
-              <p className="text-sm text-muted-foreground text-center">
-                Actuellement à la recherche d{"'"}une{" "}
-                <span className="text-primary font-medium">alternance</span> {" "}
-                en cybersécurité.
-              </p>
-            </div>
+
           </div>
         </div>
       </div>
