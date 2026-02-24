@@ -2,7 +2,7 @@
 
 import { contactInfo } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Globe, Linkedin, Github, ExternalLink } from "lucide-react";
+import { Mail, Globe, Linkedin, Github, ExternalLink } from "lucide-react";
 
 export function Contact() {
   return (
@@ -40,15 +40,7 @@ export function Contact() {
               </div>
             </a>
 
-            <div className="group flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300">
-              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Téléphone</div>
-                <div className="text-foreground">{contactInfo.phone}</div>
-              </div>
-            </div>
+
 
           </div>
 
@@ -82,6 +74,22 @@ export function Contact() {
               >
                 <Github className="w-5 h-5 mr-3" />
                 GitHub
+                <ExternalLink className="w-4 h-4 ml-auto" />
+              </Button>
+            </a>
+
+            <a
+              href="https://tryhackme.com/p/Purp5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full justify-start border-border hover:border-primary/50 hover:bg-primary/10 text-foreground hover:text-primary bg-transparent"
+              >
+                <Globe className="w-5 h-5 mr-3" />
+                TryHackMe
                 <ExternalLink className="w-4 h-4 ml-auto" />
               </Button>
             </a>
