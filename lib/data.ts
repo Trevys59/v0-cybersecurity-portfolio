@@ -243,7 +243,6 @@ export const interests = [
 
 export const contactInfo = {
   email: "trevys.sarrazyn@gmail.com",
-  phone: "+33 7 66 44 78 19",
   linkedin: "https://www.linkedin.com/in/trevys-sarrazyn-2507551b1/",
   github: "https://github.com/Trevys59",
 };
