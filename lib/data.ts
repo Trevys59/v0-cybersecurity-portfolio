@@ -8,6 +8,37 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "seahawks-monitoring",
+    title: "Seahawks Monitoring – Infrastructure Multi-Sites Supervisée et Sécurisée",
+    description:
+      "Conception et déploiement d’une infrastructure multi-sites haute disponibilité reposant sur Proxmox, pfSense et une segmentation VLAN avancée. Mise en place d’un VPN Site-to-Site IPsec entre Roubaix et Kansas, d’un VPN Client-to-Site WireGuard pour les franchises NFL, d’un cluster web Nester derrière HAProxy en DMZ, d’une base MariaDB multi-tenant (Nester Manager), d’un pipeline CI/CD GitLab et d’une stack complète de supervision (Prometheus, Grafana, Loki, Alertmanager). Le projet intègre également un système de ticketing et d’inventaire GLPI, une stratégie de sauvegarde Veeam avec “backup du backup”, ainsi qu’une télémaintenance sécurisée via VM rebond.",
+    technologies: [
+      "Proxmox VE",
+      "ZFS RAIDZ-3",
+      "pfSense",
+      "IPsec",
+      "WireGuard",
+      "VLAN",
+      "HAProxy",
+      "NGINX",
+      "MariaDB",
+      "Python (Flask)",
+      "GitLab CI/CD",
+      "Prometheus",
+      "Grafana",
+      "Loki",
+      "GLPI",
+      "Veeam Backup",
+      "Debian",
+      "Ubuntu Server",
+      "Rocky Linux",
+      "AlmaLinux",
+      "Arch Linux"
+    ],
+    securityObjective:
+      "Garantir la supervision centralisée d’infrastructures distantes tout en assurant l’isolation réseau, le chiffrement des communications inter-sites, la haute disponibilité des services critiques et la résilience des données via une stratégie de sauvegarde redondante."
+  },
+  {
     id: "tp-intrusion-ad",
     title: "Simulation d’Intrusion et Mouvement Latéral",
     description:
