@@ -8,49 +8,87 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "infra-multisite",
-    title: "Infrastructure Sécurisée Multi-Sites",
+    id: "tp-intrusion-ad",
+    title: "Simulation d’Intrusion et Mouvement Latéral",
     description:
-      "Conception et déploiement d'une infrastructure virtualisée interconnectant plusieurs sites distants avec une haute disponibilité et une sécurité renforcée.",
-    technologies: ["Proxmox", "pfSense", "VPN IPsec", "VLAN", "HAProxy"],
+      "Réalisation d’un scénario d’attaque complet en environnement contrôlé : création d’un reverse shell, compromission d’un wiki via bruteforce, déploiement d’un cheval de Troie, pivot réseau et scan interne avec nmap. Objectif : comprendre les mécanismes d’intrusion afin de mieux sécuriser les infrastructures.",
+    technologies: [
+      "Linux",
+      "Bash",
+      "Netcat",
+      "Nmap",
+      "Python",
+      "Dokuwiki",
+      "LaZagne"
+    ],
     securityObjective:
-      "Assurer la confidentialité des échanges inter-sites et la résilience face aux pannes.",
+      "Identifier les vecteurs d’attaque (reverse shell, bruteforce, élévation de privilèges) pour renforcer la détection et la résilience face aux compromissions internes."
   },
   {
-    id: "supervision-centralisee",
-    title: "Supervision Centralisée",
+    id: "infra-linux-azure",
+    title: "Infrastructure Linux Sécurisée sur Azure",
     description:
-      "Mise en place d'une stack de supervision complète permettant le monitoring en temps réel des infrastructures, avec alerting et dashboards personnalisés.",
-    technologies: ["Prometheus", "Grafana", "Loki", "Alertmanager", "Node Exporter"],
+      "Déploiement et administration de machines virtuelles Linux sur Microsoft Azure avec accès sécurisé via Bastion. Configuration réseau, validation des accès distants et mise en ligne d’une application web (Fly Airlines) accessible de manière contrôlée.",
+    technologies: [
+      "Microsoft Azure",
+      "Azure Bastion",
+      "Ubuntu Server",
+      "VM",
+      "Réseau Cloud"
+    ],
     securityObjective:
-      "Détecter les anomalies et intrusions potentielles grâce à une surveillance proactive.",
+      "Sécuriser l’accès aux machines virtuelles sans exposition publique via Bastion et garantir l’isolation réseau des ressources cloud."
   },
   {
-    id: "cloud-azure",
-    title: "Architecture Cloud Sécurisée sur Azure",
+    id: "infrastructure-securisee-vlan-vpn-web",
+    title: "Déploiement d’une Infrastructure Sécurisée Segmentée (VLAN + VPN + Apache)",
     description:
-      "Déploiement d'une architecture cloud respectant les bonnes pratiques de sécurité avec gestion des identités, chiffrement et segmentation réseau.",
-    technologies: ["Azure", "Azure AD", "Key Vault", "NSG", "Azure Firewall"],
+      "Conception et mise en œuvre d’une infrastructure réseau segmentée sous pfSense avec création de VLANs dédiés (Windows, Linux, Clients), configuration de règles de pare-feu inter-VLAN, déploiement d’un serveur Web Apache sur Debian 11 avec hôtes virtuels, et mise en place d’un VPN OpenVPN sécurisé avec certificats (CA interne, AES-256, SHA256). L’objectif était d’assurer l’isolation des environnements, le contrôle des flux et l’accès distant sécurisé aux ressources internes.",
+    technologies: [
+      "pfSense",
+      "VLAN",
+      "Firewall",
+      "OpenVPN",
+      "Apache2",
+      "Debian 11",
+      "UFW",
+      "NAT",
+      "AES-256",
+      "SHA256"
+    ],
     securityObjective:
-      "Appliquer le principe du moindre privilège et protéger les données sensibles dans le cloud.",
+      "Isoler les environnements via segmentation réseau, contrôler strictement les flux inter-VLAN et garantir un accès distant chiffré aux ressources internes grâce à OpenVPN."
   },
   {
-    id: "audit-reseau",
-    title: "Audit de Sécurité Réseau",
+    id: "audit-securisation-ad",
+    title: "Audit et Sécurisation d’une Infrastructure Active Directory",
     description:
-      "Réalisation d'un audit complet d'un réseau d'entreprise incluant analyse des vulnérabilités, tests de pénétration et recommandations de remédiation.",
-    technologies: ["Nmap", "Wireshark", "Nessus", "Metasploit", "Burp Suite"],
+      "Audit complet d’un domaine Active Directory avec Ping Castle et Purple Knight, identification des vulnérabilités (objets obsolètes, comptes privilégiés, protocoles faibles), déploiement d’un serveur Core sécurisé et création d’un domaine renforcé via Hello-My-Dir. Comparaison avant/après pour mesurer l’amélioration de la posture de sécurité.",
+    technologies: [
+      "Active Directory",
+      "Windows Server Core",
+      "Ping Castle",
+      "Purple Knight",
+      "Hello-My-Dir"
+    ],
     securityObjective:
-      "Identifier et prioriser les failles de sécurité pour renforcer la posture défensive.",
+      "Réduire la surface d’attaque du domaine AD en corrigeant les vulnérabilités critiques et en appliquant des standards de sécurité avancés."
   },
   {
-    id: "automation-python",
-    title: "Outil Python d'Automatisation Sécurité",
+    id: "rds-remoteapp-deployment",
+    title: "Déploiement et Publication Sécurisée d’Applications via RDS",
     description:
-      "Développement d'un outil en Python automatisant les tâches répétitives de sécurité : scan de ports, vérification de configurations, génération de rapports.",
-    technologies: ["Python", "Scapy", "Paramiko", "Jinja2", "SQLite"],
+      "Conception et déploiement d’une infrastructure Remote Desktop Services (RDS) sous Windows Server permettant la publication d’applications via RemoteApp et interface Web sécurisée (HTTPS). Mise en place d’une collection de sessions, gestion des droits d’accès utilisateurs, intégration Active Directory et distribution centralisée des applications sans installation locale sur les postes clients.",
+    technologies: [
+      "Windows Server",
+      "RDS",
+      "RemoteApp",
+      "RDP",
+      "HTTPS",
+      "Active Directory"
+    ],
     securityObjective:
-      "Réduire le temps de réponse aux incidents et standardiser les procédures de contrôle.",
+      "Centraliser l’exécution des applications sur un serveur sécurisé afin de limiter l’exposition des postes clients, maîtriser les droits d’accès et garantir un accès distant chiffré aux ressources."
   },
 ];
 
@@ -154,6 +192,7 @@ export const education: Education[] = [
     degree: "BTS Systèmes Numériques – option Informatique & Réseaux",
     school: "Lycée César Baggio",
     period: "09/2022 – 07/2024",
+    description: ""
   },
 ];
 
