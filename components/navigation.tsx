@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Shield, Menu, X } from "lucide-react";
+import { Shield, Menu, X, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -65,6 +65,17 @@ export function Navigation() {
                 {link.label}
               </button>
             ))}
+            <a
+              href="https://calendly.com/trevys-sarrazyn/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2"
+            >
+              <Button size="sm" className="gap-1.5">
+                <Calendar className="w-4 h-4" />
+                Réserver un entretien
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -96,6 +107,17 @@ export function Navigation() {
                   {link.label}
                 </button>
               ))}
+              <a
+                href="https://calendly.com/trevys-sarrazyn/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2"
+              >
+                <Button className="w-full gap-1.5">
+                  <Calendar className="w-4 h-4" />
+                  Réserver un entretien
+                </Button>
+              </a>
             </div>
           </div>
         )}
