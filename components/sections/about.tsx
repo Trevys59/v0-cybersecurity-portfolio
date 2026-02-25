@@ -44,7 +44,7 @@ export function About() {
             <div className="p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors group">
               <Server className="w-5 h-5 text-primary mb-2 group-hover:scale-110 transition-transform" />
               <div className="text-sm text-muted-foreground">Métiers visés</div>
-              <div className="text-foreground font-medium">Consultant Cyber ou Pentester</div>
+              <div className="text-foreground font-medium">Consultant Cyber ou Blue Team</div>
             </div>
             <div className="p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors group">
               <Shield className="w-5 h-5 text-primary mb-2 group-hover:scale-110 transition-transform" />
