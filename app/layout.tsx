@@ -1,11 +1,14 @@
 import React from "react"
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Merriweather } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LoaderProvider } from '@/components/loader-provider'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const merriweather = Merriweather({ 
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: 'Trevys Sarrazyn | Portfolio Cybersécurité',
@@ -37,8 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`font-sans antialiased`}>
-        {children}
+      <body className={`${merriweather.className} antialiased`}>
+        <LoaderProvider>
+          {children}
+        </LoaderProvider>
         <Analytics />
       </body>
     </html>

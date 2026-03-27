@@ -1,22 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Shield, Menu, X, Calendar } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { href: "#about", label: "À propos" },
-  { href: "#education", label: "Formation" },
-  { href: "#skills", label: "Compétences" },
-  { href: "#experience", label: "Expériences" },
-  { href: "#projects", label: "Projets" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Accueil" },
+  { href: "/cv", label: "CV" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +27,14 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const handleContactClick = () => {
+    if (pathname === "/") {
+      // On homepage, scroll to contact section
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // On other pages, navigate to homepage contact section
+      window.location.href = "/#contact";
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -44,38 +50,44 @@ export function Navigation() {
       <nav className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button
-            type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+          <Link
+            href="/"
+            className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
           >
-            <Shield className="w-6 h-6 text-primary" />
-            <span className="font-semibold">Trevys Sarrazyn   </span>
-          </button>
+            <Image
+              src="/images/purp5-logo.png"
+              alt="PURP5 Logo"
+              width={36}
+              height={36}
+              className="rounded"
+            />
+            <span className="font-semibold">Trevys Sarrazyn</span>
+          </Link>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <button
+              <Link
                 key={link.href}
-                type="button"
-                onClick={() => scrollToSection(link.href)}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                href={link.href}
+                className={cn(
+                  "px-4 py-2 text-sm transition-colors",
+                  pathname === link.href
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-primary"
+                )}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
-            <a
-              href="https://calendly.com/trevys-sarrazyn/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2"
+            <Button 
+              size="sm" 
+              className="ml-4 gap-2"
+              onClick={handleContactClick}
             >
-              <Button size="sm" className="gap-1.5">
-                <Calendar className="w-4 h-4" />
-                Réserver un entretien
-              </Button>
-            </a>
+              <Mail className="w-4 h-4" />
+              Contact
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -98,26 +110,27 @@ export function Navigation() {
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <button
+                <Link
                   key={link.href}
-                  type="button"
-                  onClick={() => scrollToSection(link.href)}
-                  className="px-4 py-2 text-left text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "px-4 py-2 text-left rounded-md transition-colors",
+                    pathname === link.href
+                      ? "text-primary bg-primary/5"
+                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                  )}
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
-              <a
-                href="https://calendly.com/trevys-sarrazyn/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2"
+              <Button 
+                className="mt-2 w-full gap-2"
+                onClick={handleContactClick}
               >
-                <Button className="w-full gap-1.5">
-                  <Calendar className="w-4 h-4" />
-                  Réserver un entretien
-                </Button>
-              </a>
+                <Mail className="w-4 h-4" />
+                Contact
+              </Button>
             </div>
           </div>
         )}
