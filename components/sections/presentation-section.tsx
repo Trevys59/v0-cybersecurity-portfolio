@@ -6,7 +6,7 @@ const services = [
   {
     icon: Shield,
     title: "Securite defensive",
-    description: "Configuration pare-feu, controle d&apos;acces, supervision et reponse a incident.",
+    description: "Configuration pare-feu, controle d'acces, supervision et reponse a incident.",
   },
   {
     icon: Server,
@@ -41,13 +41,13 @@ export function PresentationSection() {
               avec un goût pour la GRC.
             </p>
             <p>
-              Je m&apos;interesse particulierement a la surveillance des systemes et a la maniere de construire
-              des architectures solides face aux menaces actuelles. J&apos;aime l&apos;idee d&apos;anticiper les
-              problemes plutot que de les subir.
+              Je m&apos;interesse particulièrement a la surveillance des systèmes et a la manière de construire
+              des architectures solides face aux menaces actuelles. J&apos;aime l&apos;idée d&apos;anticiper les
+              problèmes plutôt que de les subir.
             </p>
             <p>
-              Mon objectif : travailler dans la securite des infrastructures et aider les organisations
-              a evoluer vers un numerique plus sur.
+              Mon objectif : travailler dans la securité des infrastructures et aider les organisations
+              a évoluer vers un numerique plus sur.
             </p>
           </div>
         </div>

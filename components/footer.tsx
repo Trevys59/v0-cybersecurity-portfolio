@@ -22,7 +22,7 @@ export function Footer() {
               className="rounded"
             />
             <span className="text-sm text-muted-foreground">
-              {currentYear} Trevys Sarrazyn. Tous droits reserves.
+              {currentYear} Trevys Sarrazyn. Tous droits réservés.
             </span>
           </div>
 
@@ -74,7 +74,7 @@ export function Footer() {
         {/* Built with */}
         <div className="mt-8 pt-6 border-t border-border/50 text-center">
           <p className="text-xs text-muted-foreground">
-            Concu avec passion pour la cybersecurite
+            Conçu avec passion pour la cybersécurité
           </p>
         </div>
       </div>
