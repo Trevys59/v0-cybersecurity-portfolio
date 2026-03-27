@@ -11,10 +11,10 @@ export function ContactSection() {
         {/* Section header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Un projet en tete ?
+            Un projet en tête ?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Vous avez une opportunite d&apos;alternance, un projet ou simplement une question ? 
+            Vous avez une opportunité d&apos;alternance, un projet ou simplement une question ?
             N&apos;hesitez pas a me contacter.
           </p>
         </div>
@@ -50,7 +50,7 @@ export function ContactSection() {
             <div>
               <div className="text-sm text-muted-foreground mb-1">Entretien</div>
               <div className="text-foreground font-medium group-hover:text-primary transition-colors">
-                Reserver un creneau
+                Reserver un créneau
               </div>
             </div>
           </a>
@@ -95,7 +95,7 @@ export function ContactSection() {
         <div className="mt-12 p-6 rounded-lg bg-primary/5 border border-primary/20 text-center">
           <p className="text-muted-foreground">
             Actuellement a la recherche d&apos;une{" "}
-            <span className="text-primary font-medium">alternance</span> en cybersecurite
+            <span className="text-primary font-medium">alternance</span> en cybersécurité
             pour le Mastere Expert en Securite Informatique.
           </p>
         </div>
