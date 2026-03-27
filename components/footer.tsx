@@ -1,7 +1,9 @@
 "use client";
 
-import { Shield, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { contactInfo } from "@/lib/data";
+import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,10 +14,38 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo and copyright */}
           <div className="flex items-center gap-3">
-            <Shield className="w-5 h-5 text-primary" />
+            <Image
+              src="/images/purp5-logo.png"
+              alt="PURP5 Logo"
+              width={28}
+              height={28}
+              className="rounded"
+            />
             <span className="text-sm text-muted-foreground">
-              © {currentYear} Trevys Sarrazyn. Tous droits réservés.
+              {currentYear} Trevys Sarrazyn. Tous droits reserves.
             </span>
+          </div>
+
+          {/* Navigation links */}
+          <div className="flex items-center gap-6">
+            <Link
+              href="/"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              Accueil
+            </Link>
+            <Link
+              href="/cv"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              CV
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              Blog
+            </Link>
           </div>
 
           {/* Social links */}
@@ -43,8 +73,8 @@ export function Footer() {
 
         {/* Built with */}
         <div className="mt-8 pt-6 border-t border-border/50 text-center">
-          <p className="text-xs text-muted-foreground font-mono">
-            {"</"} Conçu avec passion pour la cybersécurité {"/>"}
+          <p className="text-xs text-muted-foreground">
+            Concu avec passion pour la cybersecurite
           </p>
         </div>
       </div>
