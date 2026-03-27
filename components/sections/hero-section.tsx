@@ -56,12 +56,13 @@ export function HeroSection() {
 
         {/* Title */}
         <h2 className="text-lg md:text-xl text-muted-foreground mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-          Etudiant en Cybersecurite
+          Étudiant en Cybersécurité
         </h2>
 
         {/* Slogan */}
         <p className="text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-8 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 text-balance">
-          {"\""}Proteger les systemes, anticiper les menaces, batir des infrastructures resilientes.{"\""}
+          «Les entreprises dépensent des millions de dollars sur les pare-feu, le chiffrement et les dispositifs d'accès sécurisés, et il est de l'argent gaspillé ; aucune de ces mesures n'aborde le maillon le plus faible dans la chaîne de sécurité.»
+          <div style={{ fontStyle: 'italic' }}> Kevin Mitnick</div>
         </p>
 
         {/* Social Links */}
