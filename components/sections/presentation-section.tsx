@@ -36,17 +36,17 @@ export function PresentationSection() {
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p className="text-lg">
-              Etudiant en cybersecurite en Bac+5, je me forme dans la conception et l&apos;administration d&apos;
-              <span className="text-primary font-medium">infrastructures securisees</span>, 
-              entre reseaux, cloud et supervision.
+              Étudiant en cybersécurité en Bac+5, je me forme dans le domaine de la cybersécurité passant par la
+              <span className="text-primary font-medium"> Blue Team & Red Team</span>,
+              avec un goût pour la GRC.
             </p>
             <p>
-              Je m&apos;interesse particulierement a la surveillance des systemes et a la maniere de construire 
-              des architectures solides face aux menaces actuelles. J&apos;aime l&apos;idee d&apos;anticiper les 
+              Je m&apos;interesse particulierement a la surveillance des systemes et a la maniere de construire
+              des architectures solides face aux menaces actuelles. J&apos;aime l&apos;idee d&apos;anticiper les
               problemes plutot que de les subir.
             </p>
             <p>
-              Mon objectif : travailler dans la securite des infrastructures et aider les organisations 
+              Mon objectif : travailler dans la securite des infrastructures et aider les organisations
               a evoluer vers un numerique plus sur.
             </p>
           </div>
@@ -88,7 +88,7 @@ export function PresentationSection() {
             <div className="text-sm text-muted-foreground">En cours</div>
           </div>
           <div className="p-6 rounded-lg bg-primary/5 border border-primary/20 text-center">
-            <div className="text-3xl font-bold text-primary mb-2">Blue Team</div>
+            <div className="text-3xl font-bold text-primary mb-2">Consultant Cyber / Blue Team</div>
             <div className="text-sm text-muted-foreground">Orientation</div>
           </div>
           <div className="p-6 rounded-lg bg-primary/5 border border-primary/20 text-center">

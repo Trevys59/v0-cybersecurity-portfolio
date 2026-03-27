@@ -22,7 +22,7 @@ const socialLinks = [
   },
   {
     name: "Root-Me",
-    href: "https://www.root-me.org/Purp5",
+    href: "https://www.root-me.org/Purpy",
     icon: Globe,
   },
 ];
@@ -36,11 +36,11 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background grid effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(170,0,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(170,0,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      
+
       {/* Glow effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
-      
+
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Availability badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -88,17 +88,17 @@ export function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
           <a href="/CV_Trevys_Sarrazyn.pdf" download>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8"
             >
               <Download className="w-4 h-4 mr-2 transition-transform group-hover:-translate-y-0.5" />
               Telecharger CV
             </Button>
           </a>
-          <Button 
-            variant="outline" 
-            size="lg" 
+          <Button
+            variant="outline"
+            size="lg"
             onClick={() => scrollToSection("contact")}
             className="border-primary/50 text-primary hover:bg-primary/10 px-8"
           >
