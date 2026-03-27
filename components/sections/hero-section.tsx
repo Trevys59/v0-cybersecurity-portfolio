@@ -94,7 +94,7 @@ export function HeroSection() {
               className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8"
             >
               <Download className="w-4 h-4 mr-2 transition-transform group-hover:-translate-y-0.5" />
-              Telecharger CV
+              Télécharger CV
             </Button>
           </a>
           <Button

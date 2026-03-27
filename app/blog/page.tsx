@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog | Trevys Sarrazyn",
-  description: "Articles et reflexions sur la cybersecurite, les infrastructures et les technologies.",
+  description: "Articles et réflexions sur la cybersécurité, les infrastructures et les technologies.",
 };
 
 // Placeholder blog posts - to be replaced with actual content
@@ -24,7 +24,7 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navigation />
-      
+
       {/* Blog Header */}
       <section className="pt-32 pb-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -32,7 +32,7 @@ export default function BlogPage() {
             Blog
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Reflexions, tutoriels et retours d&apos;experience sur la cybersecurite et les infrastructures.
+            Réflexions, tutoriels et retours d&apos;expérience sur la Cybersécurité et les infrastructures.
           </p>
         </div>
       </section>
@@ -50,8 +50,8 @@ export default function BlogPage() {
                 Contenu en preparation
               </h2>
               <p className="text-muted-foreground max-w-md mx-auto mb-8">
-                Des articles sur la cybersecurite, les bonnes pratiques de securisation 
-                d&apos;infrastructures et mes retours d&apos;experience seront bientot disponibles.
+                Des articles sur la cybersécurité, les bonnes pratiques de sécurisation
+                d&apos;infrastructures et mes retours d&apos;expérience seront bientot disponibles.
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {["Cybersecurite", "Infrastructure", "Cloud", "DevSecOps", "Veille"].map((tag) => (

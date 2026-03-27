@@ -18,7 +18,7 @@ export default function CVPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navigation />
-      
+
       {/* CV Header */}
       <section className="pt-32 pb-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -26,12 +26,12 @@ export default function CVPage() {
             Curriculum Vitae
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Retrouvez ici l&apos;ensemble de mes competences, formations, experiences professionnelles et projets realises.
+            Retrouvez ici l&apos;ensemble de mes compétences, formations, expériences professionnelles et projets réalisés.
           </p>
           <a href="/CV_Trevys_Sarrazyn.pdf" download>
             <Button size="lg" className="gap-2">
               <Download className="w-4 h-4" />
-              Telecharger le CV (PDF)
+              Télécharger le CV (PDF)
             </Button>
           </a>
         </div>
