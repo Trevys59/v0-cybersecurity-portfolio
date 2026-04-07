@@ -40,13 +40,6 @@ export function Contact() {
               </div>
             </a>
 
-            <a href="/CV_Trevys_Sarrazyn.pdf" download>
-              <Button size="lg" className="gap-2">
-                <Download className="w-4 h-4" />
-                Télécharger le CV (PDF)
-              </Button>
-            </a>
-
 
           </div>
 
