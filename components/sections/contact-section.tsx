@@ -2,7 +2,7 @@
 
 import { contactInfo } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, ExternalLink, Calendar } from "lucide-react";
+import { Mail, Linkedin, Github, ExternalLink, Calendar, Download } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -56,7 +56,24 @@ export function ContactSection() {
           </a>
         </div>
 
-        {/* CV */}
+        {/* CV Download */}
+        <div className="flex justify-center mb-8">
+          <a
+            href="/CV_Trevys_Sarrazyn.pdf"
+            download
+            className="group flex items-center gap-4 p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 w-full md:w-auto md:min-w-[300px]"
+          >
+            <div className="p-4 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <Download className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="text-sm text-muted-foreground mb-1">Curriculum Vitae</div>
+              <div className="text-foreground font-medium group-hover:text-primary transition-colors">
+                Telecharger mon CV
+              </div>
+            </div>
+          </a>
+        </div>
 
         {/* Social links */}
         <div className="flex flex-wrap justify-center gap-4">
