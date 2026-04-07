@@ -24,14 +24,14 @@ const veilles = [
   {
     id: "caido",
     title: "Veille Caido",
-    excerpt: "Exploration de Caido, un outil moderne de proxy d'interception pour les tests de securite web, alternative a Burp Suite.",
+    excerpt: "Exploration de Caido, un outil moderne de proxy d'interception pour les tests de sécurité web, alternative a Burp Suite.",
     tags: ["Pentest", "Outils", "Web Security"],
     url: "https://canva.link/gjlj7n3369r8frs",
   },
   {
     id: "steganographie",
     title: "Veille Steganographie",
-    excerpt: "Decouverte des techniques de steganographie, l'art de dissimuler des informations dans des fichiers multimedia.",
+    excerpt: "Découverte des techniques de stéganographie, l'art de dissimuler des informations dans des fichiers multimédia.",
     tags: ["Steganographie", "Forensics", "OSINT"],
     url: "https://canva.link/vu52jmy0f0uifxy",
   },
