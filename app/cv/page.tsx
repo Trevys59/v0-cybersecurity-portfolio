@@ -28,12 +28,6 @@ export default function CVPage() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Retrouvez ici l&apos;ensemble de mes compétences, formations, expériences professionnelles et projets réalisés.
           </p>
-          <a href="/CV_Trevys_Sarrazyn.pdf" download>
-            <Button size="lg" className="gap-2">
-              <Download className="w-4 h-4" />
-              Télécharger le CV (PDF)
-            </Button>
-          </a>
         </div>
       </section>
 

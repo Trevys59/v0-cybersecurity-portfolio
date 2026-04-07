@@ -15,7 +15,7 @@ export function ContactSection() {
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Vous avez une opportunité d&apos;alternance, un projet ou simplement une question ?
-            N&apos;hesitez pas a me contacter.
+            N&apos;hésitez pas a me contacter.
           </p>
         </div>
 
@@ -56,6 +56,16 @@ export function ContactSection() {
           </a>
         </div>
 
+        {/* CV */}
+        <div className="max-w-4xl mx-auto text-center">
+          <a href="/CV_Trevys_Sarrazyn.pdf" download>
+            <Button size="lg" className="gap-2">
+              <Download className="w-4 h-4" />
+              Télécharger le CV (PDF)
+            </Button>
+          </a>
+        </div>
+
         {/* Social links */}
         <div className="flex flex-wrap justify-center gap-4">
           <a
@@ -91,14 +101,7 @@ export function ContactSection() {
           </a>
         </div>
 
-        {/* Availability notice */}
-        <div className="mt-12 p-6 rounded-lg bg-primary/5 border border-primary/20 text-center">
-          <p className="text-muted-foreground">
-            Actuellement a la recherche d&apos;une{" "}
-            <span className="text-primary font-medium">alternance</span> en cybersécurité
-            pour le Mastere Expert en Securite Informatique.
-          </p>
-        </div>
+
       </div>
     </section>
   );

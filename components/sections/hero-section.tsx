@@ -45,7 +45,7 @@ export function HeroSection() {
         {/* Availability badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          <span className="text-sm text-primary">Disponible pour alternance</span>
+          <span className="text-sm text-primary">Disponible</span>
         </div>
 
         {/* Name */}
