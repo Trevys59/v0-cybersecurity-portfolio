@@ -40,13 +40,13 @@ export function Contact() {
               </div>
             </a>
 
-            <div className="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
-              <p className="text-sm text-muted-foreground text-center">
-                Actuellement à la recherche d{"'"}une{" "}
-                <span className="text-primary font-medium">alternance</span> {" "}
-                en cybersécurité.
-              </p>
-            </div>
+            <a href="/CV_Trevys_Sarrazyn.pdf" download>
+              <Button size="lg" className="gap-2">
+                <Download className="w-4 h-4" />
+                Télécharger le CV (PDF)
+              </Button>
+            </a>
+
 
           </div>
 
