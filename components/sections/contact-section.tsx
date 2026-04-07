@@ -57,14 +57,7 @@ export function ContactSection() {
         </div>
 
         {/* CV */}
-        <div className="max-w-4xl mx-auto text-center">
-          <a href="/CV_Trevys_Sarrazyn.pdf" download>
-            <Button size="lg" className="gap-2">
-              <Download className="w-4 h-4" />
-              Télécharger le CV (PDF)
-            </Button>
-          </a>
-        </div>
+
 
         {/* Social links */}
         <div className="flex flex-wrap justify-center gap-4">
