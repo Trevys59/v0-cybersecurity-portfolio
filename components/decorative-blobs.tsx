@@ -7,7 +7,7 @@ export function DecorativeBlobs() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAuraScale((prev) => (prev === 1 ? 1.15 : 1));
+      setAuraScale((prev) => (prev === 1 ? 1.06 : 1));
     }, 1500);
 
     return () => clearInterval(interval);
@@ -24,20 +24,20 @@ export function DecorativeBlobs() {
           zIndex: 1,
         }}
       >
-        {/* Aura effect - on right side */}
-        <div
-          className="absolute inset-0 transition-transform duration-700 ease-in-out"
-          style={{
-            background: `radial-gradient(ellipse 80% 50% at 100% 50%, rgba(139, 0, 78, 0.5) 0%, rgba(139, 0, 78, 0.25) 40%, transparent 70%)`,
-            transform: `scaleX(${auraScale})`,
-            transformOrigin: "left center",
-          }}
-        />
         {/* Main blob - half egg shape */}
         <div
           className="absolute inset-0"
           style={{
             background: `radial-gradient(ellipse 150% 55% at -30% 50%, rgba(147, 51, 234, 0.5) 0%, rgba(147, 51, 234, 0.25) 45%, transparent 65%)`,
+          }}
+        />
+        {/* Aura effect - thin, follows egg curve, on right edge */}
+        <div
+          className="absolute inset-0 transition-transform duration-700 ease-in-out"
+          style={{
+            background: `radial-gradient(ellipse 150% 55% at -15% 50%, transparent 55%, rgba(139, 0, 78, 0.35) 60%, rgba(139, 0, 78, 0.15) 65%, transparent 70%)`,
+            transform: `scaleX(${auraScale})`,
+            transformOrigin: "left center",
           }}
         />
       </div>
@@ -51,20 +51,20 @@ export function DecorativeBlobs() {
           zIndex: 1,
         }}
       >
-        {/* Aura effect - on left side */}
-        <div
-          className="absolute inset-0 transition-transform duration-700 ease-in-out"
-          style={{
-            background: `radial-gradient(ellipse 80% 50% at 0% 50%, rgba(139, 0, 78, 0.5) 0%, rgba(139, 0, 78, 0.25) 40%, transparent 70%)`,
-            transform: `scaleX(${auraScale})`,
-            transformOrigin: "right center",
-          }}
-        />
         {/* Main blob - half egg shape */}
         <div
           className="absolute inset-0"
           style={{
             background: `radial-gradient(ellipse 150% 55% at 130% 50%, rgba(147, 51, 234, 0.5) 0%, rgba(147, 51, 234, 0.25) 45%, transparent 65%)`,
+          }}
+        />
+        {/* Aura effect - thin, follows egg curve, on left edge */}
+        <div
+          className="absolute inset-0 transition-transform duration-700 ease-in-out"
+          style={{
+            background: `radial-gradient(ellipse 150% 55% at 115% 50%, transparent 55%, rgba(139, 0, 78, 0.35) 60%, rgba(139, 0, 78, 0.15) 65%, transparent 70%)`,
+            transform: `scaleX(${auraScale})`,
+            transformOrigin: "right center",
           }}
         />
       </div>
