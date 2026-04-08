@@ -6,7 +6,7 @@ import { Mail, Linkedin, Github, ExternalLink, Calendar, Download } from "lucide
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-24 px-6 bg-card/30">
+    <section id="contact" className="py-24 px-6 bg-card/30 relative z-10">
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">

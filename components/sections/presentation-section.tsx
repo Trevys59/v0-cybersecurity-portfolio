@@ -27,7 +27,7 @@ const services = [
 
 export function PresentationSection() {
   return (
-    <section id="presentation" className="py-24 px-6">
+    <section id="presentation" className="py-24 px-6 relative z-10">
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <div className="mb-16">
