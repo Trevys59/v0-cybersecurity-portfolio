@@ -20,7 +20,7 @@ export function DecorativeBlobs() {
         className="fixed left-0 top-0 pointer-events-none"
         style={{
           height: "130vh",
-          width: "250px",
+          width: "185px",
           zIndex: 1,
         }}
       >
@@ -33,11 +33,12 @@ export function DecorativeBlobs() {
         />
         {/* Aura effect - thin, follows egg curve, on right edge */}
         <div
-          className="absolute inset-0 transition-transform duration-700 ease-in-out"
+          className="absolute inset-0"
           style={{
-            background: `radial-gradient(ellipse 150% 55% at -15% 50%, transparent 55%, rgba(139, 0, 78, 0.35) 60%, rgba(139, 0, 78, 0.15) 65%, transparent 70%)`,
+            background: `radial-gradient(ellipse 150% 55% at -15% 50%, transparent 55%, rgba(139, 0, 78, 0.3) 60%, rgba(139, 0, 78, 0.1) 65%, transparent 70%)`,
             transform: `scaleX(${auraScale})`,
             transformOrigin: "left center",
+            transition: "transform 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
       </div>
@@ -47,7 +48,7 @@ export function DecorativeBlobs() {
         className="fixed right-0 top-0 pointer-events-none"
         style={{
           height: "130vh",
-          width: "250px",
+          width: "185px",
           zIndex: 1,
         }}
       >
@@ -60,11 +61,12 @@ export function DecorativeBlobs() {
         />
         {/* Aura effect - thin, follows egg curve, on left edge */}
         <div
-          className="absolute inset-0 transition-transform duration-700 ease-in-out"
+          className="absolute inset-0"
           style={{
-            background: `radial-gradient(ellipse 150% 55% at 115% 50%, transparent 55%, rgba(139, 0, 78, 0.35) 60%, rgba(139, 0, 78, 0.15) 65%, transparent 70%)`,
+            background: `radial-gradient(ellipse 150% 55% at 115% 50%, transparent 55%, rgba(139, 0, 78, 0.3) 60%, rgba(139, 0, 78, 0.1) 65%, transparent 70%)`,
             transform: `scaleX(${auraScale})`,
             transformOrigin: "right center",
+            transition: "transform 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
       </div>
