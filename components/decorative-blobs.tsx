@@ -3,21 +3,12 @@
 import { useEffect, useState } from "react";
 
 export function DecorativeBlobs() {
-  const [auraIntensity, setAuraIntensity] = useState(0.25);
-  const [isPulsing, setIsPulsing] = useState(false);
+  const [auraIntensity, setAuraIntensity] = useState(0.15);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Pulse up
-      setIsPulsing(true);
-      setAuraIntensity(0.4);
-      
-      // Hold the pulse longer, then fade back
-      setTimeout(() => {
-        setIsPulsing(false);
-        setAuraIntensity(0.25);
-      }, 900);
-    }, 2400);
+      setAuraIntensity((prev) => (prev === 0.15 ? 0.35 : 0.15));
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
@@ -45,9 +36,7 @@ export function DecorativeBlobs() {
           className="absolute inset-0"
           style={{
             background: `radial-gradient(ellipse 150% 55% at -30% 50%, transparent 58%, rgba(139, 0, 78, ${auraIntensity}) 62%, rgba(139, 0, 78, ${auraIntensity * 0.4}) 66%, transparent 70%)`,
-            transition: isPulsing 
-              ? "background 0.6s cubic-bezier(0.4, 0, 0.2, 1)" 
-              : "background 1.4s cubic-bezier(0.4, 0, 0.2, 1)",
+            transition: "background 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
       </div>
@@ -73,9 +62,7 @@ export function DecorativeBlobs() {
           className="absolute inset-0"
           style={{
             background: `radial-gradient(ellipse 150% 55% at 130% 50%, transparent 58%, rgba(139, 0, 78, ${auraIntensity}) 62%, rgba(139, 0, 78, ${auraIntensity * 0.4}) 66%, transparent 70%)`,
-            transition: isPulsing 
-              ? "background 0.6s cubic-bezier(0.4, 0, 0.2, 1)" 
-              : "background 1.4s cubic-bezier(0.4, 0, 0.2, 1)",
+            transition: "background 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
       </div>
