@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 export function DecorativeBlobs() {
-  const [auraScale, setAuraScale] = useState(1);
+  const [auraIntensity, setAuraIntensity] = useState(0.15);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAuraScale((prev) => (prev === 1 ? 1.06 : 1));
+      setAuraIntensity((prev) => (prev === 0.15 ? 0.35 : 0.15));
     }, 1500);
 
     return () => clearInterval(interval);
@@ -31,14 +31,12 @@ export function DecorativeBlobs() {
             background: `radial-gradient(ellipse 150% 55% at -30% 50%, rgba(147, 51, 234, 0.5) 0%, rgba(147, 51, 234, 0.25) 45%, transparent 65%)`,
           }}
         />
-        {/* Aura effect - thin, follows egg curve, on right edge */}
+        {/* Aura effect - energy pulse, tightly follows blob edge */}
         <div
           className="absolute inset-0"
           style={{
-            background: `radial-gradient(ellipse 150% 55% at -15% 50%, transparent 55%, rgba(139, 0, 78, 0.3) 60%, rgba(139, 0, 78, 0.1) 65%, transparent 70%)`,
-            transform: `scaleX(${auraScale})`,
-            transformOrigin: "left center",
-            transition: "transform 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
+            background: `radial-gradient(ellipse 150% 55% at -30% 50%, transparent 58%, rgba(139, 0, 78, ${auraIntensity}) 62%, rgba(139, 0, 78, ${auraIntensity * 0.4}) 66%, transparent 70%)`,
+            transition: "background 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
       </div>
@@ -59,14 +57,12 @@ export function DecorativeBlobs() {
             background: `radial-gradient(ellipse 150% 55% at 130% 50%, rgba(147, 51, 234, 0.5) 0%, rgba(147, 51, 234, 0.25) 45%, transparent 65%)`,
           }}
         />
-        {/* Aura effect - thin, follows egg curve, on left edge */}
+        {/* Aura effect - energy pulse, tightly follows blob edge */}
         <div
           className="absolute inset-0"
           style={{
-            background: `radial-gradient(ellipse 150% 55% at 115% 50%, transparent 55%, rgba(139, 0, 78, 0.3) 60%, rgba(139, 0, 78, 0.1) 65%, transparent 70%)`,
-            transform: `scaleX(${auraScale})`,
-            transformOrigin: "right center",
-            transition: "transform 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
+            background: `radial-gradient(ellipse 150% 55% at 130% 50%, transparent 58%, rgba(139, 0, 78, ${auraIntensity}) 62%, rgba(139, 0, 78, ${auraIntensity * 0.4}) 66%, transparent 70%)`,
+            transition: "background 1.2s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
       </div>
