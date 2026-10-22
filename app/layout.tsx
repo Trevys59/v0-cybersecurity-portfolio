@@ -1,51 +1,57 @@
-import React from "react"
-import type { Metadata } from 'next'
-import { Merriweather } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import { LoaderProvider } from '@/components/loader-provider'
-import './globals.css'
+import React from "react";
+import type { Metadata } from "next";
 
-const merriweather = Merriweather({ 
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-});
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import { RevealObserver } from "@/components/reveal-observer";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Trevys Sarrazyn | Portfolio Cybersécurité',
-  description: 'Portfolio de Trevys Sarrazyn, étudiant en cybersécurité chez la Plateform_. À la recherche d\'une alternance.',
-  generator: 'v0.app',
+  title: "Trevys Sarrazyn | Portfolio Cybersécurité",
+  description:
+    "Trevys Sarrazyn, Security Engineer en alternance chez Advens, équipe SDC-OSE. Parcours, projets et formation en cybersécurité.",
+  generator: "v0.app",
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: "/icon.svg",
+        type: "image/svg+xml",
       },
     ],
-    apple: '/apple-icon.png',
+    apple: "/apple-icon.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${merriweather.className} antialiased`}>
-        <LoaderProvider>
+    <html lang="fr" suppressHydrationWarning>
+      <body className="antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <a className="skip-link" href="#main-content">
+            Aller au contenu
+          </a>
+          <RevealObserver />
           {children}
-        </LoaderProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

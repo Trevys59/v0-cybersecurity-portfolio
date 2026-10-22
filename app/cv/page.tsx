@@ -5,18 +5,20 @@ import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Qualities } from "@/components/sections/qualities";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "CV | Trevys Sarrazyn",
-  description: "Curriculum Vitae de Trevys Sarrazyn - Competences, formations, experiences et projets en cybersecurite.",
+  description:
+    "Curriculum Vitae de Trevys Sarrazyn - Competences, formations, experiences et projets en cybersecurite.",
 };
 
 export default function CVPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main
+      id="main-content"
+      className="min-h-screen bg-background text-foreground"
+    >
       <Navigation />
 
       {/* CV Header */}
@@ -26,7 +28,8 @@ export default function CVPage() {
             Curriculum Vitae
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Retrouvez ici l&apos;ensemble de mes compétences, formations, expériences professionnelles et projets réalisés.
+            Retrouvez ici l&apos;ensemble de mes compétences, formations,
+            expériences professionnelles et projets réalisés.
           </p>
         </div>
       </section>

@@ -5,7 +5,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog & Veilles | Trevys Sarrazyn",
-  description: "Articles, reflexions et veilles technologiques sur la cybersecurite.",
+  description:
+    "Articles, reflexions et veilles technologiques sur la cybersecurite.",
 };
 
 // Blog posts - articles personnels
@@ -13,7 +14,8 @@ const blogPosts = [
   {
     id: "coming-soon",
     title: "Articles a venir...",
-    excerpt: "Des articles sur la cybersecurite, les bonnes pratiques de securisation d'infrastructures, et mes retours d'experience seront bientot disponibles.",
+    excerpt:
+      "Des articles sur la cybersecurite, les bonnes pratiques de securisation d'infrastructures, et mes retours d'experience seront bientot disponibles.",
     date: "Bientot",
     tags: ["Cybersecurite", "Infrastructure"],
   },
@@ -24,24 +26,30 @@ const veilles = [
   {
     id: "caido",
     title: "Veille Caido",
-    excerpt: "Exploration de Caido, un outil moderne de proxy d'interception pour les tests de securite web, alternative a Burp Suite.",
+    excerpt:
+      "Exploration de Caido, un outil moderne de proxy d'interception pour les tests de securite web, alternative a Burp Suite.",
     tags: ["Pentest", "Outils", "Web Security"],
     url: "https://canva.link/gjlj7n3369r8frs",
   },
   {
     id: "steganographie",
     title: "Veille Steganographie",
-    excerpt: "Decouverte des techniques de steganographie, l'art de dissimuler des informations dans des fichiers multimedia.",
+    excerpt:
+      "Decouverte des techniques de steganographie, l'art de dissimuler des informations dans des fichiers multimedia.",
     tags: ["Steganographie", "Forensics", "OSINT"],
     url: "https://canva.link/vu52jmy0f0uifxy",
   },
 ];
 
 export default function BlogPage() {
-  const hasBlogPosts = blogPosts.length > 0 && blogPosts[0].id !== "coming-soon";
+  const hasBlogPosts =
+    blogPosts.length > 0 && blogPosts[0].id !== "coming-soon";
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main
+      id="main-content"
+      className="min-h-screen bg-background text-foreground"
+    >
       <Navigation />
 
       {/* Page Header */}
@@ -51,7 +59,8 @@ export default function BlogPage() {
             Blog & Veilles
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mes articles, reflexions et veilles technologiques sur la cybersecurite.
+            Mes articles, reflexions et veilles technologiques sur la
+            cybersecurite.
           </p>
         </div>
       </section>
@@ -63,7 +72,9 @@ export default function BlogPage() {
             <div className="p-2 rounded-lg bg-primary/10">
               <Eye className="w-5 h-5 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground">Veilles Technologiques</h2>
+            <h2 className="text-2xl font-bold text-foreground">
+              Veilles Technologiques
+            </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -120,18 +131,21 @@ export default function BlogPage() {
                 Contenu en preparation
               </h3>
               <p className="text-muted-foreground max-w-md mx-auto mb-6 text-sm">
-                Des articles sur la cybersecurite, les bonnes pratiques de securisation
-                d&apos;infrastructures et mes retours d&apos;experience seront bientot disponibles.
+                Des articles sur la cybersecurite, les bonnes pratiques de
+                securisation d&apos;infrastructures et mes retours
+                d&apos;experience seront bientot disponibles.
               </p>
               <div className="flex flex-wrap justify-center gap-2">
-                {["Cybersecurite", "Infrastructure", "Cloud", "DevSecOps"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                {["Cybersecurite", "Infrastructure", "Cloud", "DevSecOps"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           ) : (

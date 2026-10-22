@@ -1,8 +1,15 @@
 "use client";
 
 import { contactInfo } from "@/lib/data";
-import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, ExternalLink, Calendar, Download } from "lucide-react";
+
+import {
+  Mail,
+  Linkedin,
+  Github,
+  ExternalLink,
+  Calendar,
+  Download,
+} from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -14,8 +21,8 @@ export function ContactSection() {
             Un projet en tête ?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Vous avez une opportunité d&apos;alternance, un projet ou simplement une question ?
-            N&apos;hésitez pas a me contacter.
+            Un projet, un échange technique ou simplement une question ?
+            N&apos;hésitez pas à me contacter.
           </p>
         </div>
 
@@ -31,7 +38,7 @@ export function ContactSection() {
             </div>
             <div>
               <div className="text-sm text-muted-foreground mb-1">Email</div>
-              <div className="text-foreground font-medium group-hover:text-primary transition-colors">
+              <div className="break-all text-foreground font-medium group-hover:text-primary transition-colors">
                 {contactInfo.email}
               </div>
             </div>
@@ -48,9 +55,11 @@ export function ContactSection() {
               <Calendar className="w-6 h-6" />
             </div>
             <div>
-              <div className="text-sm text-muted-foreground mb-1">Entretien</div>
-              <div className="text-foreground font-medium group-hover:text-primary transition-colors">
-                Reserver un créneau
+              <div className="text-sm text-muted-foreground mb-1">
+                Entretien
+              </div>
+              <div className="break-all text-foreground font-medium group-hover:text-primary transition-colors">
+                Réserver un créneau
               </div>
             </div>
           </a>
@@ -67,9 +76,11 @@ export function ContactSection() {
               <Download className="w-6 h-6" />
             </div>
             <div>
-              <div className="text-sm text-muted-foreground mb-1">Curriculum Vitae</div>
-              <div className="text-foreground font-medium group-hover:text-primary transition-colors">
-                Telecharger mon CV
+              <div className="text-sm text-muted-foreground mb-1">
+                Curriculum Vitae
+              </div>
+              <div className="break-all text-foreground font-medium group-hover:text-primary transition-colors">
+                Télécharger mon CV
               </div>
             </div>
           </a>
@@ -82,15 +93,11 @@ export function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button
-              variant="outline"
-              size="lg"
-              className="gap-2 border-border hover:border-primary/50 hover:bg-primary/10 text-foreground hover:text-primary bg-transparent"
-            >
+            <span className="inline-flex items-center gap-2 border-border hover:border-primary/50 hover:bg-primary/10 text-foreground hover:text-primary bg-transparent">
               <Linkedin className="w-5 h-5" />
               LinkedIn
               <ExternalLink className="w-4 h-4" />
-            </Button>
+            </span>
           </a>
 
           <a
@@ -98,19 +105,13 @@ export function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button
-              variant="outline"
-              size="lg"
-              className="gap-2 border-border hover:border-primary/50 hover:bg-primary/10 text-foreground hover:text-primary bg-transparent"
-            >
+            <span className="inline-flex items-center gap-2 border-border hover:border-primary/50 hover:bg-primary/10 text-foreground hover:text-primary bg-transparent">
               <Github className="w-5 h-5" />
               GitHub
               <ExternalLink className="w-4 h-4" />
-            </Button>
+            </span>
           </a>
         </div>
-
-
       </div>
     </section>
   );
