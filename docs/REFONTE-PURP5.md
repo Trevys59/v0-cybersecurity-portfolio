@@ -61,3 +61,13 @@ Les dépendances de développement ESLint sont verrouillées dans pnpm-lock.yaml
 4. Obtenir la prévisualisation du projet existant et tester les parcours utilisateur et les deux thèmes sur mobile et ordinateur.
 5. Confirmer la date de début chez Advens et les données professionnelles manquantes ; actualiser le PDF si souhaité.
 6. Présenter la prévisualisation et attendre l’accord explicite avant fusion/publication.
+
+## Avancement après réautorisation GitHub
+
+La branche distante `feat/purp5-interactive-portfolio` et la PR en brouillon #24 sont maintenant créées. Commit de code distant : `81f790bc935af9e2e946cead090bcad8842df346`, arbre identique au commit local testé.
+
+Le déploiement automatique Vercel du projet existant est réussi (statut GitHub Vercel : success). Aperçu : https://v0-cybersecurity-portfolio-git-feat-p-c52ffa-trevys59s-projects.vercel.app
+
+L’aperçu demande une connexion Vercel. Les tests navigateur restent bloqués. L’action de lecture via le connecteur, qui crée ou réutilise un lien temporaire de contournement de cette protection, a été refusée par le contrôle automatique faute d’autorisation explicite pour ce changement d’accès. Aucune protection n’a été désactivée et aucun lien de contournement n’a été créé par cette action. L’inspection API du projet retourne toujours 403.
+
+La PR n’est pas fusionnée et aucune publication en production n’a été demandée. Les mentions de blocage GitHub plus haut décrivent l’état initial et sont résolues.
