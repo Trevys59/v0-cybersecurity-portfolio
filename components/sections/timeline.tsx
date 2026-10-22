@@ -52,7 +52,7 @@ export function Timeline() {
   const dated = datedIds
     .map((id) => timelineEntries.find((e) => e.id === id)!)
     .filter(matches);
-  const pending = timelineEntries.filter(
+  const trainingProjects = timelineEntries.filter(
     (e) => !datedIds.includes(e.id) && matches(e),
   );
   return (
@@ -87,21 +87,22 @@ export function Timeline() {
         ))}
       </div>
       <p className="sr-only" role="status">
-        {dated.length + pending.length} étapes affichées
+        {dated.length + trainingProjects.length} étapes affichées
       </p>
       <div className="timeline-track">
         {dated.map((e) => (
           <Entry key={e.id} entry={e} />
         ))}
       </div>
-      {pending.length > 0 && (
+      {trainingProjects.length > 0 && (
         <div className="pending-entries">
-          <h3>À situer dans le parcours</h3>
+          <h3>Projets de la formation AIS</h3>
           <p className="text-muted-foreground mb-8">
-            Ces éléments sont présentés sans leur attribuer de date non
-            confirmée.
+            Réalisés pendant ma formation chez Simplon, de décembre 2024 à
+            octobre 2025. La période correspond à la formation, sans date
+            individuelle attribuée à chaque projet.
           </p>
-          {pending.map((e) => (
+          {trainingProjects.map((e) => (
             <Entry key={e.id} entry={e} />
           ))}
         </div>

@@ -175,7 +175,7 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
-  { title: "Security Engineer — Alternance", company: "Advens · SDC-OSE", period: "En cours · date de début à confirmer", tasks: ["Poste et équipe confirmés ; missions détaillées à valider."] },
+  { title: "Security Engineer — Alternance", company: "Advens · SDC-OSE", period: "7 septembre 2026 – aujourd’hui", tasks: ["Security Engineer en alternance au sein de l’équipe SDC-OSE depuis le 7 septembre 2026."] },
   {
     title: "Stage Administrateur d'Infrastructures Sécurisées",
     company: "Chez un indépendant",

@@ -71,3 +71,9 @@ Le déploiement automatique Vercel du projet existant est réussi (statut GitHub
 L’aperçu demande une connexion Vercel. Les tests navigateur restent bloqués. L’action de lecture via le connecteur, qui crée ou réutilise un lien temporaire de contournement de cette protection, a été refusée par le contrôle automatique faute d’autorisation explicite pour ce changement d’accès. Aucune protection n’a été désactivée et aucun lien de contournement n’a été créé par cette action. L’inspection API du projet retourne toujours 403.
 
 La PR n’est pas fusionnée et aucune publication en production n’a été demandée. Les mentions de blocage GitHub plus haut décrivent l’état initial et sont résolues.
+
+## Dates confirmées
+
+L’alternance Security Engineer chez Advens, équipe SDC-OSE, a commencé le 7 septembre 2026. Les six projets sont rattachés à la formation AIS chez Simplon (décembre 2024 à octobre 2025), sans invention de dates individuelles.
+
+L’utilisateur a autorisé l’accès temporaire à l’aperçu pour les tests. La nouvelle tentative a été acceptée par le contrôle, mais Vercel retourne toujours HTTP 403 lors de la lecture de la protection du déploiement. Aucun lien temporaire n’a été obtenu.

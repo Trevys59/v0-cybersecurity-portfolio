@@ -14,11 +14,11 @@ export const timelineEntries: TimelineEntry[] = [
   {
     id: "advens",
     category: "Expériences",
-    date: "En cours · début à confirmer",
+    date: "7 septembre 2026 – aujourd’hui",
     title: "Security Engineer",
     context: "Advens · SDC-OSE · Alternance",
     details: [
-      "Poste et équipe confirmés. Les missions détaillées et la date de début restent à valider.",
+      "Security Engineer en alternance au sein de l’équipe SDC-OSE depuis le 7 septembre 2026.",
     ],
     technologies: [],
   },
@@ -48,9 +48,9 @@ export const timelineEntries: TimelineEntry[] = [
   ...projects.map((e) => ({
     id: e.id,
     category: "Projets" as const,
-    date: "Date à confirmer",
+    date: "12/2024 – 10/2025 · Formation AIS",
     title: e.title,
-    context: "Projet de formation / laboratoire",
+    context: "Projet réalisé pendant la formation AIS · Simplon",
     details: [e.description, e.securityObjective],
     technologies: e.technologies,
   })),
@@ -62,4 +62,5 @@ export const datedIds = [
   "formation-1",
   "experience-0",
   "formation-0",
+  "advens",
 ];

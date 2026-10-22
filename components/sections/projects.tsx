@@ -19,8 +19,8 @@ export function Projects() {
         </div>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Découvrez une sélection de projets réalisés dans le cadre de ma
-          formation et de mes stages en cybersécurité.
+          Découvrez les projets réalisés pendant ma formation d’Administrateur
+          d’Infrastructures Sécurisées chez Simplon, de décembre 2024 à octobre 2025.
         </p>
 
         {/* Projects grid */}
