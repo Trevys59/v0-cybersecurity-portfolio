@@ -175,6 +175,7 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
+  { title: "Security Engineer — Alternance", company: "Advens · SDC-OSE", period: "7 septembre 2026 – aujourd’hui", tasks: ["Security Engineer en alternance au sein de l’équipe SDC-OSE depuis le 7 septembre 2026."] },
   {
     title: "Stage Administrateur d'Infrastructures Sécurisées",
     company: "Chez un indépendant",
@@ -210,7 +211,7 @@ export const education: Education[] = [
   {
     degree: "Mastère Cybersécurité",
     school: "La Plateforme - Cybersup",
-    period: "01/2026 – 07/2027",
+    period: "01/2026 – 24/09/2027",
     description: "Expert en sécurité informatique & cybersécurité. Titre professionnel de niveau 7",
   },
   {

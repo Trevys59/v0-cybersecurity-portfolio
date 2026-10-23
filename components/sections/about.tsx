@@ -1,6 +1,6 @@
 "use client";
 
-import { Terminal, Server, Cloud, Shield } from "lucide-react";
+import { Terminal, Server, Shield } from "lucide-react";
 
 export function About() {
   return (
