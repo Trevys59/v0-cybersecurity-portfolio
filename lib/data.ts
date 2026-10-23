@@ -211,7 +211,7 @@ export const education: Education[] = [
   {
     degree: "Mastère Cybersécurité",
     school: "La Plateforme - Cybersup",
-    period: "01/2026 – 07/2027",
+    period: "01/2026 – 24/09/2027",
     description: "Expert en sécurité informatique & cybersécurité. Titre professionnel de niveau 7",
   },
   {
