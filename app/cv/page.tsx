@@ -15,41 +15,44 @@ export const metadata: Metadata = {
 
 export default function CVPage() {
   return (
-    <main
-      id="main-content"
-      className="min-h-screen bg-background text-foreground"
-    >
+    <>
       <Navigation />
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className="min-h-screen bg-background text-foreground"
+      >
 
-      {/* CV Header */}
-      <section className="pt-32 pb-12 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Curriculum Vitae
-          </h1>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Retrouvez ici l&apos;ensemble de mes compétences, formations,
-            expériences professionnelles et projets réalisés.
-          </p>
-        </div>
-      </section>
+        {/* CV Header */}
+        <section className="pt-32 pb-12 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Curriculum Vitae
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Retrouvez ici l&apos;ensemble de mes compétences, formations,
+              expériences professionnelles et projets réalisés.
+            </p>
+          </div>
+        </section>
 
-      {/* Skills Section */}
-      <Skills />
+        {/* Skills Section */}
+        <Skills />
 
-      {/* Education Section */}
-      <Education />
+        {/* Education Section */}
+        <Education />
 
-      {/* Experience Section */}
-      <Experience />
+        {/* Experience Section */}
+        <Experience />
 
-      {/* Projects Section */}
-      <Projects />
+        {/* Projects Section */}
+        <Projects />
 
-      {/* Qualities Section */}
-      <Qualities />
+        {/* Qualities Section */}
+        <Qualities />
 
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

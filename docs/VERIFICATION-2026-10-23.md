@@ -19,3 +19,10 @@ Le navigateur disponible ne fournit pas de redimensionnement ou d’émulation m
 ## CV PDF : incohérences confirmées
 
 Le PDF existant annonce encore une recherche d’alternance comme Analyste Cyber VOC, porte le titre Étudiant en cybersécurité et ne mentionne pas Advens. Une mise à jour éditoriale est nécessaire avant publication. Fin de mastère : août 2027 dans le PDF contre juillet 2027 dans les données du site ; demander confirmation plutôt que choisir arbitrairement. Le PDF n’a pas été modifié.
+
+
+## Mise à jour finale
+
+Fin du mastère confirmée par l’utilisateur au 24 septembre 2027 et vérifiée sur l’aperçu. Le CV PDF a été actualisé (titre, Advens, fin du mastère), rendu et contrôlé sur une page ; les incohérences PDF décrites plus haut sont désormais résolues. L’utilisateur refera sa présentation ultérieurement.
+
+Correction du lien d’évitement : navigation et pied de page sortis de main sur les trois pages, et main reçoit tabIndex=-1. TypeScript et ESLint contrôlés. Le dernier déploiement avant cette correction était réussi. Les limites de test mobile et Lighthouse restent inchangées.

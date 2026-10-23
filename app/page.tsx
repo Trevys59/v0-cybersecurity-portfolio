@@ -9,17 +9,20 @@ import { Projects } from "@/components/sections/projects";
 
 export default function Home() {
   return (
-    <main
-      id="main-content"
-      className="min-h-screen bg-background text-foreground"
-    >
+    <>
       <Navigation />
-      <HeroSection />
-      <Timeline />
-      <Projects />
-      <PresentationSection />
-      <ContactSection />
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className="min-h-screen bg-background text-foreground"
+      >
+        <HeroSection />
+        <Timeline />
+        <Projects />
+        <PresentationSection />
+        <ContactSection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
