@@ -845,3 +845,52 @@ article[id] {
     translate: none;
   }
 }
+
+/* Motion stays short, optional, and tied to navigation or interaction. */
+.hero-glow { transition: translate 350ms ease-out; pointer-events: none; }
+.hero-copy .intro:nth-child(5) { animation-delay: 240ms; }
+.hero-copy .intro:nth-child(6) { animation-delay: 300ms; }
+.identity-panel.intro { animation-delay: 180ms; }
+.reading-progress { position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; pointer-events: none; }
+.reading-progress > div { height: 100%; background: var(--primary); transform: scaleX(0); transform-origin: left; }
+.desktop-nav a { position: relative; transition: color 180ms; }
+.desktop-nav a::after { content: ""; position: absolute; bottom: -8px; left: 0; right: 0; height: 2px; background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform 200ms; }
+.desktop-nav a[aria-current] { color: var(--primary); }
+.desktop-nav a[aria-current]::after { transform: scaleX(1); }
+.mobile-nav { animation: enter 180ms both; }
+.mobile-nav a[aria-current] { background: var(--secondary); color: var(--primary); }
+.filter-list button { transition: background-color 180ms, color 180ms, border-color 180ms; }
+.timeline-results { animation: enter 250ms both; }
+.timeline-card[open] .timeline-detail { animation: enter 200ms both; }
+.timeline-item:has(.timeline-card[open]) .timeline-date { color: var(--primary); }
+.timeline-item:has(.timeline-card[open])::after { outline: 2px solid var(--primary); outline-offset: 5px; }
+.project-card { min-width: 0; display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); transition: transform 220ms, border-color 220ms, box-shadow 220ms; }
+.project-card:focus-within, .project-card:target { border-color: var(--primary); box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 15%, transparent); }
+.project-icon { width: fit-content; padding: 12px; margin-bottom: 22px; border-radius: 10px; color: var(--primary); background: color-mix(in srgb, var(--primary) 10%, transparent); transition: background-color 200ms, color 200ms; }
+.project-open { margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; border-top: 1px solid var(--border); padding-top: 18px; color: var(--primary); font-size: 13px; text-align: left; }
+.project-open svg, .hero-actions svg, .inline-link svg { flex-shrink: 0; transition: transform 200ms; }
+.project-overlay { position: fixed; inset: 0; z-index: 70; background: #080610b3; backdrop-filter: blur(5px); animation: overlay-in 180ms both; }
+.project-dialog { position: fixed; z-index: 71; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(760px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; overscroll-behavior: contain; padding: 48px; border: 1px solid var(--border); border-radius: 20px; background: var(--card); color: var(--foreground); box-shadow: 0 30px 100px #0004; animation: dialog-in 220ms both; }
+.project-dialog .eyebrow { padding-right: 36px; }
+.project-dialog-title { font-size: clamp(24px, 3vw, 34px); line-height: 1.2; letter-spacing: -.7px; font-weight: 600; margin-bottom: 18px; overflow-wrap: anywhere; }
+.project-dialog h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+.project-description, .project-objective p { font-size: 15px; line-height: 1.8; color: var(--muted-foreground); }
+.project-objective { margin: 28px 0; padding: 22px; border-left: 2px solid var(--primary); background: color-mix(in srgb, var(--primary) 6%, transparent); }
+.dialog-close { position: sticky; top: 0; float: right; margin: -24px -24px 0 12px; display: grid; place-items: center; min-width: 44px; min-height: 44px; border: 1px solid var(--border); border-radius: 50%; background: var(--card); color: var(--foreground); z-index: 1; }
+@keyframes overlay-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dialog-in { from { opacity: 0; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 16px 40px #0001; }
+  .project-card:hover .project-icon { background: var(--primary); color: var(--primary-foreground); }
+  .project-open:hover svg, .inline-link:hover svg { transform: translate(2px, -2px); }
+  .action-primary:hover svg { transform: translateY(3px); }
+}
+@media (max-width: 600px) {
+  .project-dialog { padding: 28px 22px; border-radius: 14px; }
+  .dialog-close { margin: -12px -6px 0 10px; }
+  .project-objective { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow { translate: none !important; }
+  .project-card:hover, .action-primary:hover, .action-secondary:hover { transform: none; }
+}

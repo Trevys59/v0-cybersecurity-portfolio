@@ -11,7 +11,7 @@ const filters = [
 ] as const;
 function Entry({ entry }: { entry: TimelineEntry }) {
   return (
-    <article className="timeline-item reveal">
+    <article className="timeline-item">
       <div className="timeline-date">
         {entry.date}
         <span>{entry.category}</span>
@@ -89,6 +89,7 @@ export function Timeline() {
       <p className="sr-only" role="status">
         {dated.length + trainingProjects.length} étapes affichées
       </p>
+      <div key={filter} className="timeline-results">
       <div className="timeline-track">
         {dated.map((e) => (
           <Entry key={e.id} entry={e} />
@@ -116,6 +117,7 @@ export function Timeline() {
           </p>
         </div>
       )}
+      </div>
       <p className="timeline-note">
         Les niveaux de maîtrise ne sont pas déduits des technologies citées. Les
         distinctions « connue », « étudiée », « pratiquée » et « expliquée sans

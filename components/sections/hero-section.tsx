@@ -1,11 +1,20 @@
+"use client";
+
+import { useRef, type PointerEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, ArrowDown, Download } from "lucide-react";
 export function HeroSection() {
+  const halo = useRef<HTMLDivElement>(null);
+  function moveHalo(event: PointerEvent<HTMLElement>) {
+    if (event.pointerType !== "mouse" || !window.matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    halo.current?.style.setProperty("translate", `${(event.clientX - bounds.left - bounds.width / 2) * 0.12}px ${(event.clientY - bounds.top - bounds.height / 2) * 0.12}px`);
+  }
   return (
-    <section className="hero-shell">
+    <section id="accueil" className="hero-shell" onPointerMove={moveHalo} onPointerLeave={() => halo.current?.style.removeProperty("translate")}>
       <div className="network-grid" aria-hidden="true" />
-      <div className="hero-glow" aria-hidden="true" />
+      <div ref={halo} className="hero-glow" aria-hidden="true" />
       <div className="hero-copy">
         <p className="eyebrow intro">PURP5 / CYBERSÉCURITÉ</p>
         <p className="availability intro">
